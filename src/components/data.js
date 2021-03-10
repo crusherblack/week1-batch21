@@ -36,3 +36,34 @@ export const products = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx9sknrkZKnFZfjFMWTZE1cGPIMU7tJklhWA&usqp=CAU",
   },
 ];
+
+const restaurants = [
+  {
+    id: 1,
+    title: "KFC",
+    products: [
+      {
+        id: 1,
+        title: "Ayam Paha",
+      },
+      {
+        id: 1,
+        title: "Ayam Paha",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Geprek",
+    products: [
+      {
+        id: 1,
+        title: "Ayam Paha",
+      },
+      {
+        id: 1,
+        title: "Ayam Paha",
+      },
+    ],
+  },
+];
