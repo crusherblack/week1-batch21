@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { CartContext } from "../contexts/cartContext";
+
 import Card from "../components/Card";
 import { products } from "../components/data";
 
 const Home = () => {
+  const [state, dispatch] = useContext(CartContext);
+
   const [productsList, setProductsList] = useState(products);
   const [form, setForm] = useState({
     name: "",

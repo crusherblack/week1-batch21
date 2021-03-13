@@ -13,7 +13,9 @@ const Detail = () => {
   }, []);
 
   const ProductById = () => {
-    const filterProduct = products.find((product) => product.id == id);
+    const filterProduct = products.find(
+      (product) => product.id === parseInt(id)
+    );
     setProduct(filterProduct);
   };
 

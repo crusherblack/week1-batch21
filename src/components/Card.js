@@ -1,15 +1,19 @@
 import { useHistory } from "react-router-dom";
 
-const Card = ({ product }) => {
+const Card = ({ product, fromProduct, addProductToCart }) => {
   const history = useHistory();
 
   const { id, title, img } = product;
 
   return (
     <div
-      className="card mb-3"
+      className="mb-3 card"
       onClick={() => {
-        history.push(`/product/${id}`);
+        if (!fromProduct) {
+          history.push(`/product/${id}`);
+        } else {
+          return;
+        }
       }}
       style={{
         cursor: "pointer",
@@ -31,7 +35,15 @@ const Card = ({ product }) => {
         >
           {title}
         </p>
-        <div className="d-flex justify-content-center align-items-center">
+        <div className=" d-flex justify-content-center align-items-center flex-column">
+          {fromProduct && (
+            <button
+              onClick={() => addProductToCart(product)}
+              className="mb-2 btn btn-primary btn-block"
+            >
+              Add To Cart
+            </button>
+          )}
           <small className="font-weight-bold">Rp 500.000</small>
         </div>
       </div>
