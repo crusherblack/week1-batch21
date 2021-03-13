@@ -16,6 +16,9 @@ const NavbarComponent = () => {
           <Nav.Link as={Link} to="/about" className="text-light">
             About
           </Nav.Link>
+          <Nav.Link as={Link} to="/use-effect" className="text-light">
+            Use Effect
+          </Nav.Link>
           <Nav.Link as={Link} to="/login" className="text-light">
             Login
           </Nav.Link>

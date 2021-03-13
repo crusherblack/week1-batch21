@@ -11,8 +11,9 @@ const Home = () => {
 
   const { name, imgUrl } = form;
 
+  console.log(form);
+
   const onChange = (e) => {
-    console.log(e.target.files);
     const updateForm = { ...form };
     updateForm[e.target.name] =
       e.target.type === "file"
@@ -42,7 +43,7 @@ const Home = () => {
 
   return (
     <div>
-      <div className="mb-3 mt-2">
+      <div className="mt-2 mb-3">
         <form onSubmit={(e) => handleSubmit(e)}>
           <h3 className="text-center">Form Add Product</h3>
           <div className="form-group">
@@ -78,7 +79,7 @@ const Home = () => {
           <pre>{JSON.stringify(form, 2, null)}</pre>
         </form>
       </div>
-      <div className="row mt-3">
+      <div className="mt-3 row">
         {productsList.map((product) => (
           <div className="col-sm-3" key={product.id}>
             <Card product={product} />

@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Login from "./pages/Login";
 import Detail from "./pages/Detail";
+import UseEffect from "./pages/UseEffect";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route exact path="/about" component={About} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/product/:id" component={Detail} />
+          <Route exact path="/use-effect" component={UseEffect} />
         </Switch>
       </div>
     </Router>
